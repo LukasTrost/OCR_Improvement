@@ -1,16 +1,14 @@
-# This is a sample Python script.
+import cv2
+import pytesseract
+import matplotlib.pyplot as plt
+from src.DataFetchFunctions.FetchImagesAndGroundTruth import FetchImagesAndGroundTruth
+from src.PreprocessFunctions.CannyEdge import cannyEdgeDetection
+from src.PreprocessFunctions.GrayImage import grayImage
 
-# Press Umschalt+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+input_Path = "D://Programmieren//MasterOfDisaster//Implementierungen//OCR//Images//train"
+output_path = "D://Programmieren//MasterOfDisaster//Implementierungen//OCR//Images//"
+tesseract_save_path = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+functions = ["None", cannyEdgeDetection, grayImage]
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Strg+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    FetchImagesAndGroundTruth(input_Path,output_path, functions, tesseract_save_path)
