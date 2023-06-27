@@ -1,3 +1,4 @@
 pytesseract
 matplotlib
 opencv-python
+numpy
