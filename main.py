@@ -16,5 +16,9 @@ YoloCrop_input_Path = "D://Programmieren//MasterOfDisaster//OCR Zwischenspeicher
 YoloCrop_output_path = "D://Programmieren//MasterOfDisaster//OCR Zwischenspeichern//OCR//"
 
 if __name__ == '__main__':
+
+    # use this to perform normal ocr
     #FetchImagesAndGroundTruth(input_Path,output_path, functions, tesseract_save_path, output_detected_text = True)
-    PerformOCRonYOLOCrops(YoloCrop_input_Path,YoloCrop_output_path, functions, tesseract_save_path, output_detected_text = False)
+
+    #use this to perform ocr on cropped out images
+    #PerformOCRonYOLOCrops(YoloCrop_input_Path,YoloCrop_output_path, functions, tesseract_save_path, output_detected_text = False)
